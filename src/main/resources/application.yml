@@ -11,17 +11,18 @@ server:
   port: 8765
   
 zuul:
-  prefix: /banks
+  #prefix: /banks
   routes:
     bank:
       path: /0/*
       serviceId: bank
     bank1:
-      path: /1/*
+      path: /send1
       serviceId: bank1
+      #url: http://localhost:8081
     bank2:
-      path: /2/*
+      path: /send2
       serviceId: bank2
     bank3:
-      path: /3/*
+      path: /send3
       serviceId: bank3
