@@ -14,7 +14,7 @@ zuul:
   #prefix: /banks
   routes:
     bank:
-      path: /send/
+      path: /send
       serviceId: bank
     bank1:
       path: /send1
