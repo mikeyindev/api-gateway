@@ -5,6 +5,23 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+    registerWithEureka: false
 
 server: 
   port: 8765
+  
+zuul:
+  prefix: /banks
+  routes:
+    bank:
+      path: /0/*
+      serviceId: bank
+    bank1:
+      path: /1/*
+      serviceId: bank1
+    bank2:
+      path: /2/*
+      serviceId: bank2
+    bank3:
+      path: /3/*
+      serviceId: bank3
